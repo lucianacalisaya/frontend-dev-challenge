@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+//styleName: Title/h1-title-bold-sans;
+$h1-title-bold-sans-font-family: Source Sans Pro;
+$h1-title-bold-sans-font-size: 40px;
+$h1-title-bold-sans-font-weight: 700;
+$h1-title-bold-sans-line-height: 40px;
+$h1-title-bold-sans-letter-spacing: -0.02em;
+
+//styleName: Title/h6-title-bold-sans;
+$h6-title-bold-sans-font-family: Source Sans Pro;
+$h6-title-bold-sans-font-size: 24px;
+$h6-title-bold-sans-font-weight: 700;
+$h6-title-bold-sans-line-height: 32px;
+$h6-title-bold-sans-letter-spacing: -0.02em;
+
+//styleName: Paragraph/paragraph-serif;
+$paragraph-serif-font-family: Merriweather;
+$paragraph-serif-font-size: 16px;
+$paragraph-serif-font-weight: 400;
+$paragraph-serif-line-height: 32px;
+$paragraph-serif-letter-spacing: 0.02em;
+
+//styleName: Paragraph/paragraph-sans;
+$paragraph-sans-font-family: Source Code Pro;
+$paragraph-sans-font-size: 16px;
+$paragraph-sans-font-weight: 400;
+$paragraph-sans-line-height: 24px;
+$paragraph-sans-letter-spacing: -0.02em;
+
+//styleName: Form/label-regular-sans;
+$label-regular-sans-font-family: Source Sans Pro;
+$label-regular-sans-font-size: 16px;
+$label-regular-sans-font-weight: 400;
+$label-regular-sans-line-height: 24px;
+$label-regular-sans-letter-spacing: -0.02em;
+
+//styleName: Paragraph/paragraph-bold-serif;
+$paragraph-bold-serif-font-family: Merriweather;
+$paragraph-bold-serif-font-size: 16px;
+$paragraph-bold-serif-font-weight: 700;
+$paragraph-bold-serif-line-height: 24px;
+$paragraph-bold-serif-letter-spacing: -0.02em;
+
+//styleName: Form/text-button-bold-sans;
+$text-button-bold-sans-font-family: Source Sans Pro;
+$text-button-bold-sans-font-size: 16px;
+$text-button-bold-sans-font-weight: 700;
+$text-button-bold-sans-line-height: 24px;
+$text-button-bold-sans-letter-spacing: -0.02em;
+
+//styleName: Form/text-button-regular-sans;
+$text-button-regular-sans-font-family: Source Sans Pro;
+$text-button-regular-sans-font-size: 16px;
+$text-button-regular-sans-font-weight: 400;
+$text-button-regular-sans-line-height: 24px;
+$text-button-regular-sans-letter-spacing: -0.02em;
+
+//styleName: Form/placeholder-regular-sans;
+$placeholder-regular-sans-font-family: Source Sans Pro;
+$placeholder-regular-sans-font-size: 16px;
+$placeholder-regular-sans-font-weight: 400;
+$placeholder-regular-sans-line-height: 24px;
+$placeholder-regular-sans-letter-spacing: -0.02em;
+
+//styleName: Others/smalltext-regular-serif;
+$smalltext-regular-serif-font-family: Merriweather;
+$smalltext-regular-serif-font-size: 12px;
+$smalltext-regular-serif-font-weight: 400;
+$smalltext-regular-serif-line-height: 16px;
+$smalltext-regular-serif-letter-spacing: -0.02em;
+
+//styleName: Others/bloquote-regular-italic-serif;
+$bloquote-regular-italic-serif-font-family: Merriweather;
+$bloquote-regular-italic-serif-font-size: 16px;
+$bloquote-regular-italic-serif-font-style: italic;
+$bloquote-regular-italic-serif-font-weight: 400;
+$bloquote-regular-italic-serif-line-height: 24px;
+$bloquote-regular-italic-serif-letter-spacing: -0.02em;
