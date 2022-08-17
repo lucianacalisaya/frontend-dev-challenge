@@ -1,39 +1,72 @@
-import './ItemListContainer.scss'
-import { useState, useEffect } from 'react'
-import { getItemsFromSource, getItemsByCategory, getItemsBySubcategory} from '../../asyncMock'
-import ItemList from '../ItemList/ItemList'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import './SliderContainer.scss';
+import Slider from '../Slider/Slider'
+// import {useSwipeable} from 'react-swipeable'
 
-const SliderContainer = () => {
-    const [items, setItems] = useState([])
-    const [items2, setItems2] = useState([])
-    const {categoryId} = useParams()
-    const {subcategoryId} = useParams();
+const SliderContainer = ({ items, children }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-    
-    useEffect(() => {
-        if (!categoryId && !subcategoryId) {
-            getItemsFromSource().then(items => {
-                setItems(items)
-            })
-        } else if (categoryId && !subcategoryId){
-            getItemsByCategory(categoryId).then(items => {
-                setItems(items)
-            })
-        } else {
-            getItemsBySubcategory(subcategoryId).then(items2 => {
-                setItems2(items2)
-            })
-        }
+  const updateIndex = (newIndex) => {
+    if (newIndex < 0) {
+      newIndex = items.count(children) - 1;
+    } else if (newIndex >= items.count(children)) {
+      newIndex = 0;
+    }
 
-    }, [categoryId, subcategoryId])
-    return (
-        <>
-            <div className="item-container">
-                {!subcategoryId ? <ItemList items={items} i={4}/> : <ItemList items={items2} i={4}/>}
-            </div>
-        </>
-    )
-}
+    setActiveIndex(newIndex);
+  };
 
-export default SliderContainer
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!paused) {
+        updateIndex(activeIndex + 1);
+      }
+    }, 3000);
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  });
+
+  // const handlers = useSwipeable({
+    // onSwipedLeft: () => updateIndex(activeIndex + 1),
+    // onSwipedRight: () => updateIndex(activeIndex - 1)
+  // });
+
+  return (
+    <div
+      // {...handlers}
+      className='slider'
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div
+        className='inner'
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        <Slider items={items} {...items} />
+      </div>
+      <div className='indicators'>
+        <button
+          onClick={() => {
+            updateIndex(activeIndex - 1);
+          }}
+        >
+          Prev
+        </button>
+        <button
+          onClick={() => {
+            updateIndex(activeIndex + 1);
+          }}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SliderContainer;

@@ -20,7 +20,7 @@ const BlogContainer = () => {
 
     return (
         <div>
-           <Blog {...blog}/>    
+            <Blog {...blog}/>             
         </div>
           
     );

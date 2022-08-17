@@ -3,7 +3,9 @@
 .itemGrid {
     display: flex;
     justify-content: space-between;
-    width: 100%;    
+    gap: 25px;
+    width: 100%;
+    
     &RightContainer {
         width: 50%;
         max-width: 525px;
@@ -12,3 +14,15 @@
         justify-content: space-between;
     }
 }
+@media only screen and (max-width: 991px) {
+    .itemGrid {
+        flex-direction: column;
+        &RightContainer {
+            width: 100%;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}    

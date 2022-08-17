@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import { getItemsFromSource, getItemsByCategory, getItemsBySubcategory} from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import Slider from '../Slider/Slider'
+import SliderContainer from '../SliderContainer/SliderContainer'
+
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([])
@@ -29,12 +30,19 @@ const ItemListContainer = () => {
 
     }, [categoryId, subcategoryId])
     return (
-        <>
-            <div className="itemContainer">
-                <Slider items={items}/>
-                {!subcategoryId ? <ItemList items={items} i={4}/> : <ItemList items={items2} i={4}/>}
-            </div>
-        </>
+        <div className='itemContainer'>
+            {!subcategoryId && !categoryId
+                ? 
+                <SliderContainer items={items}/> : null
+            }
+            
+            {!subcategoryId
+                ? 
+                <ItemList items={items}/> 
+                : 
+                <ItemList items={items2}/>
+            }
+        </div>
     )
 }
 

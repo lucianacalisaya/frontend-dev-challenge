@@ -23,19 +23,18 @@
         color: lighten($brand-color-pink, 5%)
     }
     .articleTitle {
-        font-size: 22px;
-        line-height: 1.2;
-        letter-spacing: 0.02;
-        color: darken($brand-color-indigo, 25%);
+        @include title-bold-sans(22px, darken($brand-color-indigo, 5%));
         transition: 0.2s ease-in-out;
         &:hover {
             color: lighten($brand-color-pink, 5%)
         }
     }
     .subcategoryTitle {
-        color: $brand-color-indigo;
-        font-size: 14px;
-        line-height: 1.4;
+        @include title-bold-sans(12px, lighten($brand-color-indigo, 25%));
+        text-transform: uppercase;
+    }
+    p {
+        @include paragraph-serif(16px, $spread-grey6);
     }
 }
 
@@ -56,9 +55,7 @@
 
 .sliderItem {
     width: 250px;
-    display: flex;
     flex-direction: column;
-    justify-content: space-around;
     &__imagebox {
         height: 10rem;
         border-top-left-radius: 10px;
@@ -69,6 +66,7 @@
 
 .itemGridLeft {
     width: 50%;
+    min-width: 300px;
     max-width: 525px;
     &__imagebox {
         border-top-left-radius: 10px;
@@ -80,6 +78,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-bottom: 15px;
     &__imagebox {
         width: 120px;
         height: 120px;
@@ -90,6 +89,27 @@
     &__textbox {
         display: flex;
         flex-direction: column;
-        width: 390px;
-    }
+        width: 60%;
+        max-width: 390px;
+        min-width: 120px;    }
 }
+
+@media only screen and (max-width: 991px) {
+    .itemGridLeft {
+        width: 100%;
+        min-width: 280px;
+        max-width: unset;
+    }
+    .itemGridRight {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &__textbox {
+            width: fit-content;
+            min-width: 120px;
+            p {
+                display: none;
+            }
+        }
+    }
+} 

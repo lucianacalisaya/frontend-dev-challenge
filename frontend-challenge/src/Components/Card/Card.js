@@ -2,8 +2,8 @@ import React from 'react';
 
 function Card({item}) {
   return(
-    <div className="">
-      <img className="" alt={item.title} src='' />
+    <div className=''>
+      <img className='' alt={item.title} src='' />
       <div>
         <h2>{item.title}</h2>
         <p>{item.subcategory}</p>

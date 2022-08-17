@@ -15,4 +15,5 @@ https://misanimales.com/
 11. utilizar variables de colores y fuentes.
 12. recomendamos crear una función de alert para enviar el formulario (puede ser envío falso, solo una alerta), un Listener de scroll para mostrar/ocultar algún botón o el banner fijo/flotante, click del FAQ/Accordion, abrir y cerrar un modal.
 13. anadir readme del react.js
+14. Revisar h1 porque no hay.
 
