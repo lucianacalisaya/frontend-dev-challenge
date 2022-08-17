@@ -6,7 +6,7 @@ import Slider from '../Slider/Slider'
 const SliderContainer = ({ items, children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-
+/*
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = items.count(children) - 1;
@@ -30,7 +30,7 @@ const SliderContainer = ({ items, children }) => {
       }
     };
   });
-
+*/
   // const handlers = useSwipeable({
     // onSwipedLeft: () => updateIndex(activeIndex + 1),
     // onSwipedRight: () => updateIndex(activeIndex - 1)
@@ -51,16 +51,16 @@ const SliderContainer = ({ items, children }) => {
       </div>
       <div className='indicators'>
         <button
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
+          // onClick={() => {
+          //   updateIndex(activeIndex - 1);
+          // }}
         >
           Prev
         </button>
         <button
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}
+          // onClick={() => {
+          //   updateIndex(activeIndex + 1);
+          // }}
         >
           Next
         </button>
