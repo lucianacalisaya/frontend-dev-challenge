@@ -1,0 +1,14 @@
+@import '../../scss/style.scss';
+
+.itemGrid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;    
+    &RightContainer {
+        width: 50%;
+        max-width: 525px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

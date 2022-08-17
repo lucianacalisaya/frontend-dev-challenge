@@ -7,18 +7,18 @@ const Navbar = () => {
     
     return (
         <nav>
-      <div class="navbar">
-        <div class="container nav-container">
-            <input class="checkbox" type="checkbox" name="" id="" />
-            <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
+      <div className="navbar">
+        <div className="container nav-container">
+            <input className="checkbox" type="checkbox" name="" id="" />
+            <div className="hamburger-lines">
+              <span className="line line1"></span>
+              <span className="line line2"></span>
+              <span className="line line3"></span>
             </div>  
-          <div class="logo">
+          <div className="logo">
             <Link to='/'><img src='resources/images/logo__ES-1.svg' alt=''/></Link>
           </div>
-          <div class="menu-items">
+          <div className="menu-items">
             <div>
                 <Search details={items}/>
             </div>

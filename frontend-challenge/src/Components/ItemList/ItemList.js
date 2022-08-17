@@ -1,11 +1,16 @@
 import './ItemList.scss'
 import Item from "../Item/Item"
 
-const ItemList = ({items}) => {
+let ItemList = ({items}) => {
+
     return(
-        <div className='itemList'>
-            {items.map(items => <Item key={items.title} {...items}/>)}
-        </div>      
+        <div className='itemGrid'>
+            {items.slice(4,5).map(items => <Item addClass='itemGridLeft' key={items.title} {...items} showSubc={false} showDesc={true}/>)}
+            <div className='itemGridRightContainer'>
+                {items.slice(5,8).map(items => <Item addClass='itemGridRight' key={items.title} {...items} showSubc={false} showDesc={true}/>)}
+            </div>
+        </div>
+        
     )
 }
 
