@@ -1,0 +1,17 @@
+@import '../../scss/style.scss';
+.faq {
+    // margin: 0 15vw;
+    max-width: 600px;
+    margin: 6rem auto 4rem;
+    padding: 0 10px;
+    &__titleBox {
+        width: 100%;
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    &__title {
+        @include title-bold-sans(32px, lighten($brand-color-indigo, 25%));
+    }
+}

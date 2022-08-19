@@ -1,0 +1,69 @@
+@import '../../scss/style.scss';
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.333);
+    &__body {
+        width: 100%;
+        height: 16rem;
+        max-width: 600px;
+        background-color: $basic-white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    &__close {
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        background-color: $brand-color-indigo;
+        border-top-left-radius:10px;
+        border-top-right-radius: 10px;
+        a {
+            margin-left: 8px;
+        }
+        path {
+            fill: $basic-white;
+        }
+    }
+    &__greeting {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 11rem;
+        h4 {
+            @include title-bold-sans(24px, $basic-black);
+        }
+        svg {
+            width: 64px;
+            height: 64px;
+        }
+        path {
+            fill:lighten($brand-color-pink, 10%) ;
+        }
+    }
+    &__accept {
+        height: 2.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-right: 16px;
+            padding: 8px;
+            @include text-button-bold-sans(16px, $brand-color-indigo);
+            &:hover {
+                color: lighten($brand-color-pink, 10%);
+            }
+        }
+    }
+}

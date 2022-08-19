@@ -13,15 +13,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    li {
-      list-style: none;
-    }
-    a {
-      text-decoration: none;
-      padding: 0.7rem;
-      @include title-bold-sans(22px, $brand-color-indigo);
-
-    }
     .checkbox {
       display: block;
       height: 32px;

@@ -1,4 +1,5 @@
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -93,10 +94,10 @@ const Footer = () => {
                     <h4 className='footer__headings'>Titulo</h4>
                     <ul className='footer__list'>
                         <li>
-
+                            <Link to={`/faq`}>Preguntas frecuentes</Link>
                         </li>
                         <li>
-
+                            <Link to={`/contacto`}>Contacto</Link>
                         </li>
                         <li>
 
