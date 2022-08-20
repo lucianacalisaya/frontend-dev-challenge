@@ -1,9 +1,8 @@
 import './ItemListContainer.scss'
 import { useState, useEffect } from 'react'
-import { getItemsFromSource, getItemsByCategory, getItemsBySubcategory} from '../../asyncMock'
+import { getItemsByCategory, getItemsBySubcategory} from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import SliderContainer from '../SliderContainer/SliderContainer'
 
 
 const ItemListContainer = () => {
@@ -14,11 +13,7 @@ const ItemListContainer = () => {
 
     
     useEffect(() => {
-        if (!categoryId && !subcategoryId) {
-            getItemsFromSource().then(items => {
-                setItems(items)
-            })
-        } else if (categoryId && !subcategoryId){
+         if (categoryId && !subcategoryId){
             getItemsByCategory(categoryId).then(items => {
                 setItems(items)
             })
@@ -31,16 +26,18 @@ const ItemListContainer = () => {
     }, [categoryId, subcategoryId])
     return (
         <div className='itemContainer'>
-            {!subcategoryId && !categoryId
-                ? 
-                <SliderContainer items={items}/> : null
-            }
-            
             {!subcategoryId
                 ? 
-                <ItemList items={items}/> 
+                <div>
+                    <h1 className="itemContainer-title">{categoryId}</h1>
+                    <ItemList items={items}/> 
+                </div>
+                
                 : 
-                <ItemList items={items2}/>
+                <div>
+                    <h1 className="itemContainer-title">{subcategoryId}</h1>            
+                    <ItemList items={items2}/>
+                </div>
             }
         </div>
     )

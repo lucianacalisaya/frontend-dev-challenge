@@ -3,7 +3,7 @@ const items = [
         id:1,
         title: 'What is cristalina',
         category: 'health',
-        subcategory: 'first aid',
+        subcategory: 'first-aid',
         img: 'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2021/03/shutterstock_1466690546.jpg?resize=2048,1190',
         duration: '5',
         factCheck: true,
@@ -186,12 +186,18 @@ export const getItemsBySubcategory = (subcategoryId) => {
 }
 
 
-export const getItemById = (id) => {
+export const getItemByTitle = (title) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(items.find(item => item.id === id))
+            resolve(items.find(item => item.title.replace(/\s/g , "-") === title))
         },5)
     })
 }
-
+export const getItemById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(items.find(item => item.id.replace(/\s/g , "-") === id))
+        },5)
+    })
+}
 export default items

@@ -1,7 +1,16 @@
 import './Footer.scss';
 import { Link } from 'react-router-dom';
+import Modal from '../Modal/Modal';
+import {useState} from 'react';
+
 
 const Footer = () => {
+    const [modal, setModal] = useState(false);
+
+    const handleClick = e => {
+      setModal(current => !current);
+       e.preventDefault()
+  };
     return (
         <footer className='footer'>
             <div className='footer__box'>
@@ -100,7 +109,9 @@ const Footer = () => {
                             <Link to={`/contacto`}>Contacto</Link>
                         </li>
                         <li>
-
+                            <input type='email'/>
+                            <button onClick={handleClick}>Suscribite al newsletter</button>
+                            {modal ? <Modal greetings={`Te has suscrito a nuestro Newsletter`} onClick={() => setModal(false)}/> : null}
                         </li>
                         <li>
 

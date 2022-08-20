@@ -1,7 +1,8 @@
-import { useState, useEffect} from 'react';
-import { getItemById } from '../../asyncMock';
 import Blog from '../Blog/Blog';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect} from 'react';
+import { getItemByTitle } from '../../asyncMock';
+import { useParams } from 'react-router-dom'
+import './BlogContainer.scss'
 
 const BlogContainer = () => {
     const [blog, setBlog] = useState({});
@@ -9,20 +10,15 @@ const BlogContainer = () => {
     const { itemId } = useParams();
 
     useEffect(() => {
-        getItemById(itemId)
+        getItemByTitle(itemId)
             .then(blog => {
                 setBlog(blog);
             })
-            .catch(error => {
-                console.log(error);
-            })
     }, [itemId])
-
     return (
-        <div>
-            <Blog {...blog}/>             
-        </div>
-          
+        <main className='blogContainer'>
+            <Blog item={blog}/>
+        </main>
     );
 };
 

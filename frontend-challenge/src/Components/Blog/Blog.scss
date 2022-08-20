@@ -1,0 +1,95 @@
+@import '../../scss/style.scss';
+.blog {
+    width: 100%;
+    &__breadcrumb {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        gap: 12px;
+        &--home {
+            display: flex;
+            align-items: center;
+        }
+        &--back {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        a {
+            @include title-bold-sans(16px, $spread-grey3);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+    &__home {
+        display: flex;
+        align-items: center;
+    }
+    &__arrow {
+        path {
+            fill: $brand-color-pink;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+    }
+    &__title {
+        @include title-bold-sans(40px, lighten($brand-color-indigo, 15%));
+        margin: 12px 0;
+    }
+    &__info {
+        display: flex;
+        gap: 48px;
+    }
+    &__serif {
+        @include paragraph-serif(12px, $spread-grey6)
+    }
+    &__fact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+        path {
+            fill: darken(#adff2f,30%)
+        }
+    }
+    &__time {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+        path {
+            fill: darken($brand-color-indigo,10%)
+        }
+    }
+    &__description {
+        border-left: 4px solid $brand-color-pink;
+        padding-left: 16px;
+        margin: 24px 0;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__sider {
+        width: 750px;
+    }
+    &__author {
+        span {
+            color: $brand-color-indigo;
+            font-weight: bold;
+        }
+    }
+    &__update {
+        span {
+            font-weight: bold;
+        }
+    }
+}

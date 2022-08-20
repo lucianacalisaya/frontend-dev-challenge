@@ -1,4 +1,5 @@
 import Modal from "../Modal/Modal";
+import './Form.scss'
 import {useState} from 'react';
 
 const Form = () => {
@@ -9,38 +10,40 @@ const Form = () => {
        e.preventDefault()
   };
     return (
-        <div className="form">
-            <h1>Ponte en contacto con nosotros</h1>
-            <div>
-                <div>
-                    <label>Nombre</label>
-                    <input type='email' placeholder='Nombre'/>
+        <div className='form'>
+            <h1 className='form__title'>Ponte en contacto con nosotros</h1>
+            <div className='form__body'>
+                <div className='form__box'>
+                    <label className='form__label'>Nombre</label>
+                    <input className="form__fill" type='email' placeholder='Nombre'/>
                 </div>
-                <div>
-                    <label>Email</label>
-                    <input type='email' placeholder='Email'/>
+                <div className='form__box'>
+                    <label className='form__label'>Email</label>
+                    <input className="form__fill" type='email' placeholder='Email'/>
                 </div>
-                <div>
-                    <legend>Razon de contacto</legend>
-                    <div>
-                        <input type='radio' value=''/>
-                        <label>Consulta</label>
-                    </div>
-                    <div>
-                        <input type='radio' value=''/>
-                        <label>Sugerencias</label>
-                    </div>
-                    <div>
-                        <input type='radio' value=''/>
-                        <label>Trabaja con nosotros</label>
+                <div className='form__box'>
+                    <legend className="form__label">Razon de contacto</legend>
+                    <div className='form__fill'>
+                        <div>
+                            <input type='radio' value=''/>
+                            <label>Consulta</label>
+                        </div>
+                        <div>
+                            <input type='radio' value=''/>
+                            <label>Sugerencias</label>
+                        </div>
+                        <div>
+                            <input type='radio' value=''/>
+                            <label>Trabaja con nosotros</label>
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div className='form__box form__box--center'>
                     <input type='checkbox'/>
                     <label>Deseo suscribirme al newsletter</label>
                 </div>
-                <div>
-                    <button  onClick={handleClick}>Enviar</button>
+                <div className='form__box form__box--end'>
+                    <button className='form__send' onClick={handleClick}>Enviar</button>
                 </div>
             </div>
             {modal ? <Modal greetings={`Pronto nos pondremos en contacto con usted`} onClick={() => setModal(false)}/> : null}

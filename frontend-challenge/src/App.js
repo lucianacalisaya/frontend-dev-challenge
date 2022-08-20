@@ -2,6 +2,7 @@ import './scss/style.scss';
 //import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import Main from './Components/Main/Main';
 import BlogContainer from './Components/BlogContainer/BlogContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Faq from './Components/Faq/Faq';
@@ -14,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Header/>
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/' element={<Main/>}/>
           <Route path='/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/item/:itemId' element={<BlogContainer/>}/>
           <Route path='/:categoryId/:subcategoryId' element={<ItemListContainer/>}/>

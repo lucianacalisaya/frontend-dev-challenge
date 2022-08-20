@@ -7,17 +7,18 @@
     display: flex;
     flex-direction: column;
     padding: 0 15vw;
-    margin-top: 75px;
     text-align: center;
     background-color: $basic-white;
+    position: absolute;//o fixed
+    z-index: 1; 
     li {
         list-style: none;
       }
-      a {
-        text-decoration: none;
-        padding: 0.7rem;
-        @include title-bold-sans(22px, $brand-color-indigo);
-      }
+    &__link {
+      text-decoration: none;
+      padding: 0.7rem;
+      @include title-bold-sans(22px, $brand-color-indigo);
+    }
     &__menu {
         display: flex;
         justify-content: space-between;

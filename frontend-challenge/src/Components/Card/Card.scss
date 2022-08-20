@@ -1,0 +1,31 @@
+@import '../../scss/style.scss';
+
+.card {
+    width: 230px;
+    &__image {
+        height: 10rem;
+        width: 100%;
+        object-fit: cover
+    }
+    &__body {
+        text-align: left
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &:hover h2{
+        color: lighten($brand-color-pink, 5%)
+    }
+    &__title {
+        @include title-bold-sans(22px, darken($brand-color-indigo, 5%));
+        cursor: pointer;
+        &:hover {
+            color: lighten($brand-color-pink, 5%)
+        }
+    }
+    &__subcategory {
+        @include title-bold-sans(12px, lighten($brand-color-indigo, 25%));
+        text-transform: uppercase;
+
+    }
+}
