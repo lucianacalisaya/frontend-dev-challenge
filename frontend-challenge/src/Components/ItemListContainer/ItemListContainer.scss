@@ -1,3 +1,16 @@
 .itemContainer {
     margin: 85px 15vw;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 }
+@media only screen and (max-width: 991px) {
+    .itemContainer  {
+        &__items{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+} 

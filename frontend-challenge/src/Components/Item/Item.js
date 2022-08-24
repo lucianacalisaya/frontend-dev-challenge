@@ -1,9 +1,9 @@
 import './Item.scss';
 import { Link } from 'react-router-dom'
 
-const Item = ({img, title, category, subcategory, quote, showSubc, showDesc, addClass}) => {
+const Item = ({img, title, category, subcategory, quote, showSubc, showDesc, addClass, style}) => {
     return (
-            <div className={`${addClass} itemBasicStyles`}>
+            <div className={`${addClass} itemBasicStyles`} style={style}>
                 <div className={`${addClass}__imagebox imageHover`}>
                     <Link to={`/item/${title.replace(/\s/g , "-")}`}>
                         <img className={`${addClass}__image`} src={img} alt={title}/>

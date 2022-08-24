@@ -2,27 +2,58 @@
 
 .itemGrid {
     display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    width: 100%;
-    
-    &RightContainer {
-        width: 50%;
-        max-width: 525px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    gap: 24px;
+}
+.itemGridLeft {
+    width: 50%;
+    min-width: 300px;
+    max-width: 525px;
+    &__imagebox {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
     }
 }
+.itemGridRight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    &__imagebox {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    &__textbox {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        max-width: 390px;
+        min-width: 120px;    
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .itemGrid {
         flex-direction: column;
-        &RightContainer {
-            width: 100%;
-            min-width: 280px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+    }
+    .itemGridLeft {
+        width: 100%;
+        min-width: 280px;
+        max-width: unset;
+    }
+    .itemGridRight {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &__textbox {
+            width: fit-content;
+            min-width: 120px;
+            p {
+                display: none;
+            }
         }
     }
-}    
+} 

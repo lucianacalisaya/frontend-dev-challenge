@@ -30,34 +30,31 @@ const Footer = () => {
                 </div>
                 <div className='footer__nextToLogo'>
                     <div className='footer__info'>
-                        <h4 className='footer__headings footer__headings--color'>Titulo <span>holi</span></h4>
+                        <h4 className='footer__headings footer__headings--color'>Mejor con Salud  <span>también está disponible en:</span></h4>
                         <ul className='footer__list'>
-                            <li>hola hola</li>
-                            <li>hola hola</li>
-                            <li>hola hola</li>
-                            <li>hola hola</li>
+                            <li>Français</li>
+                            <li>Deutsch</li>
+                            <li>Português</li>
+                            <li>English</li>
                         </ul>
                     </div>
                     <div className='footer__info'>
-                        <h4 className='footer__headings footer__headings--color'>Titulo</h4>
-                        <ul className='footer__list'>
+                        <h4 className='footer__headings footer__headings--color'>Síguenos</h4>
+                        <ul className='footer__list footer__list--social'>
                             <li>
-
+                                <img src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt=""/>
                             </li>
                             <li>
-
+                                <img src="https://cdn-icons-png.flaticon.com/512/48/48899.png" alt=""/>
                             </li>
                             <li>
-
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt=""/>
                             </li>
                             <li>
-
+                                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""/>
                             </li>
                             <li>
-
-                            </li>
-                            <li>
-
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt=""/>
                             </li>
                         </ul>
                     </div>
@@ -65,43 +62,35 @@ const Footer = () => {
             </div>
             <hr className='footer__division'/>
             <div className='footer__box'>
-                <div>
-                    <img src='' alt=''/>
+                <div className=''>
+                    <img src='https://cdn.atomik.vip/shared/logo__mcontigo-group.png?auto=webp&quality=45&width=190&crop=16:9,smart,safe' alt='Logo mcontigo'/>
                 </div>
-                <div>
-                    <p className='footer__text'> <span>Neque porro quisquam est,</span> qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </p>
-                    <p className='footer__text'>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+                <div className=''>
+                    <p className='footer__text'> <span>Mejor con Salud</span> Revista sobre buenos hábitos y cuidados para tu salud <br/>© 2012 – 2022. Todos los derechos reservados.
+                    <br/>
+                    El contenido de esta publicación se replica con el fin de realizar un challenge de entrevista técnica. Le recomendamos visitar la página oficial para tener información real.</p>
                 </div>
-                <div>
-                    <img src='' alt=''/>
-                    <p className='footer__text'>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <div className='footer__newsletter'>
+                    <p className='footer__text'>Suscribite al newsletter:</p>
+                    <input type='email'/>
+                    <button onClick={handleClick}>Enviar</button>
+                    {modal ? <Modal greetings={`Te has suscrito a nuestro Newsletter`} onClick={() => setModal(false)}/> : null}
                 </div>
             </div>
             <hr className='footer__division'/>
             <div className='footer__box'>
-                <div className='footer__info'>
-                    <h4 className='footer__headings'>Titulo</h4>
+                <div className='footer__column footer__info'>
+                    <h4 className='footer__headings'>Destacados</h4>
                     <ul className='footer__list'>
-                        <li>hola hola</li>
-                        <li>hola hola</li>
-                        <li>hola hola</li>
-                        <li>hola hola</li>
+                        <li>Cáncer</li>
+                        <li>Ansiedad</li>
+                        <li>Cáncer de mama</li>
+                        <li>Diabetes</li>
                     </ul>
                 </div>
-                <div className='footer__info'>
-                    <h4 className='footer__headings'>Titulo</h4>
-                    <ul className='footer__list'>
-                        <li>hola hola</li>
-                        <li>hola hola</li>
-                        <li>hola hola</li>
-                        <li>hola hola</li>
-                    </ul>
-                </div>
-                <div className='footer__info'>
-                    <h4 className='footer__headings'>Titulo</h4>
-                    <ul className='footer__list'>
+                <div className='footer__column footer__info'>
+                    <h4 className='footer__headings'>Enlaces útiles</h4>
+                    <ul className='footer__list footer__list--links'>
                         <li>
                             <Link to={`/faq`}>Preguntas frecuentes</Link>
                         </li>
@@ -109,19 +98,20 @@ const Footer = () => {
                             <Link to={`/contacto`}>Contacto</Link>
                         </li>
                         <li>
-                            <input type='email'/>
-                            <button onClick={handleClick}>Suscribite al newsletter</button>
-                            {modal ? <Modal greetings={`Te has suscrito a nuestro Newsletter`} onClick={() => setModal(false)}/> : null}
+                            Términos y condiciones de uso
                         </li>
                         <li>
-
+                            Política de privacidad
                         </li>
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
+                    </ul>
+                </div>
+                <div className='footer__column footer__info'>
+                    <h4 className='footer__headings'>Otros sitios web</h4>
+                    <ul className='footer__list footer__list--sites'>
+                        <li><img src='https://cdn.atomik.vip/themes/mcs/icon-mcs-alpha.svg?auto=webp&quality=45&width=32&crop=16:9,smart,safe'/></li>
+                        <li><img src='https://cdn.atomik.vip/themes/mcs/icon-em-alpha.svg?auto=webp&quality=45&width=32&crop=16:9,smart,safe'/></li>
+                        <li><img src='https://cdn.atomik.vip/themes/mcs/icon-ma-alpha.svg?auto=webp&quality=45&width=32&crop=16:9,smart,safe'/></li>
+                        <li><img src='https://cdn.atomik.vip/themes/mcs/icon-lmem-alpha.svg?auto=webp&quality=45&width=32&crop=16:9,smart,safe'/></li>
                     </ul>
                 </div>
             </div>

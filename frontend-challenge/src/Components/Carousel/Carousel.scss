@@ -1,0 +1,39 @@
+@import '../../scss/style.scss';
+.carouselContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 24px;
+    width: 100%;
+}
+
+.carouselItem {
+    width: 250px;
+    flex-direction: column;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    &__imagebox {
+        height: 10rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        img {
+            width: unset;
+        }
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .carouselContainer {
+        gap: unset;
+    }
+    .carouselItem {
+        min-width: 100%;
+        width: 100%;
+        &__imagebox {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+}

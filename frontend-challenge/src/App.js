@@ -1,4 +1,4 @@
-import './scss/style.scss';
+import './App.css';
 //import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'

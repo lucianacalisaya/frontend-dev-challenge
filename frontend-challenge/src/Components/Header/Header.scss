@@ -21,13 +21,8 @@
         }
     }
     &__hamburgerLines {
-        // display: block;
         height: 26px;
         width: 32px;
-        // position: absolute;
-        // top: 17px;
-        // left: 20px;
-        // z-index: -1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -76,4 +71,20 @@
             fill: $basic-black;
         }
     }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    height: unset;
+    &__logo {
+      width: 100%;
+      margin: 2px 8px;
+      a {
+        height: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

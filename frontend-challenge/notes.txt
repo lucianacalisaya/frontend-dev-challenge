@@ -1,19 +1,6 @@
-1. Menú hamburguesa
 2. Hero Rotatorio
-3. FAQ tipo accordion. Un html de FAQ
 4. Carousel de testimonios.
-5. Formulario de contacto. Un html de Contacto.
-6. Newsletter suscription.
-https://lamenteesmaravillosa.com/ 
-https://mejorconsalud.as.com/ 
-https://eresmama.com/ 
-https://misanimales.com/
 7.agregar webkits
-8. Favicon, titles, alts, buscar el chat.
-9. buscar ui lib grid. No es necesario usarla.
-10. 8px de espacios, padding, margin
-11. utilizar variables de colores y fuentes.
-12. recomendamos crear una función de alert para enviar el formulario (puede ser envío falso, solo una alerta), un Listener de scroll para mostrar/ocultar algún botón o el banner fijo/flotante, click del FAQ/Accordion, abrir y cerrar un modal.
+8. Favicon, titles, alts, buscar el chat. SEO
 13. anadir readme del react.js
 14. Revisar h1 porque no hay.
-

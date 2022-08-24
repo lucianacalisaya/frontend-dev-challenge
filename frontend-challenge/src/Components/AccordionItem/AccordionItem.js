@@ -12,19 +12,19 @@ const AccordionItem = ({ faq }) => {
   };
 
   return (
-    <li className={`accordion_item ${clicked ? 'active' : ''}`}>
-      <button className='button' onClick={handleToggle}>
+    <li className={`accordion__item ${clicked ? 'active' : ''}`}>
+      <button className='accordion__button' onClick={handleToggle}>
         {question}
-        <span className='control'>{clicked ? '—' : '+'} </span>
+        <span className='accordion__control'>{clicked ? '—' : '+'} </span>
       </button>
 
-      <div ref={contentEl} className='answer_wrapper' style={
+      <div ref={contentEl} className='accordion__wrapper' style={
           clicked
             ? { height: contentEl.current.scrollHeight }
             : { height: '0px' }
         }
       >
-        <div className='answer'>{answer}</div>
+        <div className='accordion__answer'>{answer}</div>
       </div>
     </li>
   );

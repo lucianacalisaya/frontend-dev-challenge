@@ -1,10 +1,11 @@
-.accordion_item {
-    border-top: 1px solid #9f9f9f;
+@import '../../scss/style.scss';
+.accordion__item {
+    border-top: 1px solid $neutral-white;
 }
-.button {
+.accordion__button {
     font-size: 16px;
-    background-color: #008593;
-    color: #fff;
+    background-color: lighten($brand-color-indigo, 5%);
+    color:$neutral-white;
     text-align: left;
     font-weight: 700;
     display: flex;
@@ -17,25 +18,25 @@
     border: none;
   }
   
-  .control {
+  .accordion__control {
     font-size: 20px;
   }
   
-  .answer {
-    background-color: #f7f7f7;
+  .accordion__answer {
+    background-color: $neutral-white;
     padding: 20px;
   }
   
   /* activate toggle */
-  .accordion_item.active .button {
-    background-color: #105057;
+  .accordion__item.active .accordion__button {
+    background-color: darken($brand-color-indigo, 5%);
   }
-  .answer_wrapper {
+  .accordion__wrapper {
     height: 0;
     overflow: hidden;
     transition: height ease 0.2s;
   }
-  /* .answer_wrapper.open {
+  /* .answer__wrapper.open {
     height: auto;
   } */
   

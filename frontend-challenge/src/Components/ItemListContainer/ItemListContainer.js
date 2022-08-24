@@ -25,21 +25,18 @@ const ItemListContainer = () => {
 
     }, [categoryId, subcategoryId])
     return (
-        <div className='itemContainer'>
-            {!subcategoryId
-                ? 
-                <div>
-                    <h1 className="itemContainer-title">{categoryId}</h1>
-                    <ItemList items={items}/> 
-                </div>
-                
-                : 
-                <div>
-                    <h1 className="itemContainer-title">{subcategoryId}</h1>            
-                    <ItemList items={items2}/>
-                </div>
-            }
-        </div>
+        
+        !subcategoryId
+            ? 
+            <div className='itemContainer'>
+                <h1 className="itemContainer-title">{categoryId}</h1>
+                <div className='itemContainer__items'><ItemList items={items}/> </div>
+            </div>
+            : 
+            <div className='itemContainer'>
+                <h1 className="itemContainer-title">{subcategoryId}</h1>            
+                <div className='itemContainer__items'><ItemList items={items2}/></div>                   
+            </div>
     )
 }
 

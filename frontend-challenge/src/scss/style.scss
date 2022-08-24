@@ -1,14 +1,3 @@
 @import 'variables/colors';
 @import 'variables/fonts';
 @import 'mixins/mixins';
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: $basic-white;
-}
-p {
-    hyphens: manual;
-}

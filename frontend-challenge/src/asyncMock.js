@@ -160,7 +160,21 @@ export const faqs = [
       answer: "Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque."
     }
   ];
-  
+
+export const testimonies = [
+    {
+        person: 'Lucia Gonzalez',
+        testimonie: 'Me gustaría agradecer al sitio, me ayudó de una manera inimaginable, el psicólogo fue sumamente servicial y acogedor conmigo y me siento mejor conmigo mismo.'
+    },
+    {
+        person: 'Luciana Gonzalez',
+        testimonie: 'Me gustaría agradecer al sitio, me ayudó de una manera inimaginable, el psicólogo fue sumamente servicial y acogedor conmigo y me siento mejor conmigo mismo.'
+    },
+    {
+        person: 'Lucrecia Gonzalez',
+        testimonie: 'Me gustaría agradecer al sitio, me ayudó de una manera inimaginable, el psicólogo fue sumamente servicial y acogedor conmigo y me siento mejor conmigo mismo.'
+    }
+]
 
 export const getItemsFromSource = () => {
     return new Promise((resolve) =>{
@@ -169,7 +183,6 @@ export const getItemsFromSource = () => {
         },)
     })
 }
-
 export const getItemsByCategory = (categoryId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
