@@ -1,4 +1,4 @@
-
+import './CarouselItem.scss'
 
 const CarouselItem = ({testimonie, person, style}) => {
     return (
@@ -12,7 +12,7 @@ const CarouselItem = ({testimonie, person, style}) => {
                 <p className='carouselItem__testimonie'>{testimonie}</p>
             </div>
             <div>
-                <p className='carouselItem__person'>{person}</p>
+                <p className='carouselItem__person'>~{person}~</p>
             </div>
         </div>
     )

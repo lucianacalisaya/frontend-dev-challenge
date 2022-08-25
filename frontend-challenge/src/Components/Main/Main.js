@@ -17,8 +17,8 @@ const Main = () => {
     }, [categoryId])
     return (
         <div className='main'>
-            <Carousel/>        
             <MainList items={items}/> 
+            <Carousel/>        
         </div>
     )
 }

@@ -1,5 +1,4 @@
 2. Hero Rotatorio
-4. Carousel de testimonios.
 7.agregar webkits
 8. Favicon, titles, alts, buscar el chat. SEO
 13. anadir readme del react.js
