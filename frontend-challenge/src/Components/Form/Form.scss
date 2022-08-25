@@ -21,10 +21,13 @@
         display: flex;
         justify-content: space-between;
         &--center {
-            justify-content: center
+            justify-content: center;
+            input {
+                margin-right: 8px;
+            }
         }
         &--end {
-            justify-content: flex-end
+            justify-content: center;
         }
     }
     &__label {
@@ -34,6 +37,20 @@
         min-width: 180px;
         width: 75%;
         max-width: 450px;
+        border: none;
+        height: 32px;
+        padding: 0 8px;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 4px 0px $spread-grey4;
+        &--reasons {
+            height: fit-content;
+            box-shadow: none;
+            input {
+                margin-bottom: 8px;
+                margin-right: 8px;
+                border-color: $spread-grey2;
+            }
+        }
     }
     &__send {
         padding: 8px;

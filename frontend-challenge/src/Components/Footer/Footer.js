@@ -72,9 +72,11 @@ const Footer = () => {
                 </div>
                 <div className='footer__newsletter'>
                     <p className='footer__text'>Suscribite al newsletter:</p>
-                    <input type='email'/>
-                    <button onClick={handleClick}>Enviar</button>
-                    {modal ? <Modal greetings={`Te has suscrito a nuestro Newsletter`} onClick={() => setModal(false)}/> : null}
+                    <div>
+                        <input type='email'/>
+                        <button onClick={handleClick}>Enviar</button>
+                        {modal ? <Modal greetings={`Te has suscrito a nuestro Newsletter`} onClick={() => setModal(false)}/> : null}
+                    </div>
                 </div>
             </div>
             <hr className='footer__division'/>

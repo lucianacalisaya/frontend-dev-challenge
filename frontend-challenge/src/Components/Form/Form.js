@@ -22,8 +22,8 @@ const Form = () => {
                     <input className="form__fill" type='email' placeholder='Email'/>
                 </div>
                 <div className='form__box'>
-                    <legend className="form__label">Razon de contacto</legend>
-                    <div className='form__fill'>
+                    <legend className="form__label">Razón de contacto</legend>
+                    <div className='form__fill form__fill--reasons'>
                         <div>
                             <input type='radio' value=''/>
                             <label>Consulta</label>

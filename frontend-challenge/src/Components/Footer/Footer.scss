@@ -70,6 +70,10 @@
         p {
             height: min-content;
         }
+        div {
+            display: flex;
+            gap: 8px;
+        }
         input {
             border: none;
             border-radius: 5px;
@@ -114,8 +118,12 @@
         &__newsletter {
             flex-direction: row;
             margin-bottom: 16px;
+            div {
+                flex-direction: column;
+                width: 100%;
+            }
             p {
-                width: -webkit-fill-available;
+                width: 100%;
             }
             input {
                 max-width: 450px;
