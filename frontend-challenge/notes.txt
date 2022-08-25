@@ -3,3 +3,4 @@
 8. Favicon, titles, alts, buscar el chat. SEO
 13. anadir readme del react.js
 14. Revisar h1 porque no hay.
+15. menu, hover y alto

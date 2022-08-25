@@ -12,7 +12,7 @@ const Main = () => {
 
     useEffect(() => {
         getItemsFromSource(categoryId).then(response => {
-            setItems(response)
+            setItems(response.slice(0,8))
         })
     }, [categoryId])
     return (
