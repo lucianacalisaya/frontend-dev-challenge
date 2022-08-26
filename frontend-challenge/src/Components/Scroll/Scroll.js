@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './Scroll.scss'
 const Scroll = (props) => {
   return( 
-    <div style={{overflowY: 'scroll', height:'70vh'}}>
+    <div className='results'>
       {props.children}
     </div>	
   );

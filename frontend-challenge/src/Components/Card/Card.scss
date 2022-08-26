@@ -1,6 +1,7 @@
 @import '../../scss/style.scss';
 
 .card {
+    min-width: 230px;
     width: 230px;
     &__image {
         height: 10rem;
@@ -12,6 +13,7 @@
     }
     &__link {
         text-decoration: none;
+        height: fit-content;
     }
     &:hover h2{
         color: lighten($brand-color-pink, 5%)
@@ -26,6 +28,6 @@
     &__subcategory {
         @include title-bold-sans(12px, lighten($brand-color-indigo, 25%));
         text-transform: uppercase;
-
+        line-height: unset;
     }
 }

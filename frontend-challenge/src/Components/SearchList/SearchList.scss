@@ -1,5 +1,12 @@
 .searchList {
     display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 24px;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 991px) {
+    .searchList::-webkit-scrollbar {
+        display: none;
+    }
 }

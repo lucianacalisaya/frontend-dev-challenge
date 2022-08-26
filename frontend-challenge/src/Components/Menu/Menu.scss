@@ -6,11 +6,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 15vw;
+    padding: 85px 15vw;
     text-align: center;
     background-color: $basic-white;
-    position: absolute;//o fixed
-    z-index: 1; 
+    position: fixed;//o fixed
+    z-index: 1;
+    top: 0;
+    overflow: scroll;
     li {
         list-style: none;
       }
@@ -39,7 +41,9 @@
         
       }
 }
-
+.navbar::-webkit-scrollbar {
+  display: none;
+}
 @media only screen and (max-width: 550px) {
   .navbar {
     &__menu {

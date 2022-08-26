@@ -1,6 +1,4 @@
-2. Hero Rotatorio
+
 7.agregar webkits
-8. Favicon, titles, alts, buscar el chat. SEO
-13. anadir readme del react.js
-14. Revisar h1 porque no hay.
+8.t Titlesbuscar el chat. SEO
 15. menu, hover y alto
