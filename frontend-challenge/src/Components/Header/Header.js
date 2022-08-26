@@ -20,7 +20,7 @@ const Header = () => {
                 </div>
             </button>
             <div className='header__logo'>
-              <Link to='/'><img src='/resources/images/logo__ES-1.svg' alt=''/></Link>
+              <Link to='/'><img src='/resources/images/logo__ES-1.svg' alt='Logo Mejor con Salud'/></Link>
             </div>
             <div className='header__searchIcon'>
               <button onClick={handleClick} className='header__searchIcon-button'>

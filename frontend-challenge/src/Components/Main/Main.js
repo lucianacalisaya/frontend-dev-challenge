@@ -17,6 +17,7 @@ const Main = () => {
     }, [categoryId])
     return (
         <div className='main'>
+            <h1 className='main__title'>Revista sobre buenos hábitos y cuidados para tu salud.</h1>
             <MainList items={items}/> 
             <Carousel/>        
         </div>

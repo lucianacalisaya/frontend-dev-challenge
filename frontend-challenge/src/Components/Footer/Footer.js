@@ -42,19 +42,19 @@ const Footer = () => {
                         <h4 className='footer__headings footer__headings--color'>Síguenos</h4>
                         <ul className='footer__list footer__list--social'>
                             <li>
-                                <img src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt=""/>
+                                <img src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt="Logo Facebook"/>
                             </li>
                             <li>
-                                <img src="https://cdn-icons-png.flaticon.com/512/48/48899.png" alt=""/>
+                                <img src="https://cdn-icons-png.flaticon.com/512/48/48899.png" alt="Logo Pinterest"/>
                             </li>
                             <li>
-                                <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt=""/>
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Logo Twitter"/>
                             </li>
                             <li>
-                                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""/>
+                                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Logo Instagram"/>
                             </li>
                             <li>
-                                <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt=""/>
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="Logo Youtube"/>
                             </li>
                         </ul>
                     </div>

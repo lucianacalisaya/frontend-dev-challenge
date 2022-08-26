@@ -5,7 +5,7 @@ const Faq = () => {
     return (
         <div className='faq'>
             <div className='faq__titleBox'>
-                <h2 className='faq__title'>Contactate con nosotros</h2>
+                <h1 className='faq__title'>Contactate con nosotros</h1>
             </div>
             <Accordion/>
         </div>

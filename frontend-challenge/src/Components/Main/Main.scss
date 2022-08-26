@@ -1,5 +1,9 @@
+@import '../../scss/style.scss';
 .main {
     margin: 85px 15vw;
+    &__title {
+        @include title-bold-sans(32px, $brand-color-indigo);
+    }
 }
 @media only screen and (max-width: 400px) {
     .main {
